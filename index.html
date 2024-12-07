@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }} {{ form.username() }}<br>
+        {{ form.password.label }} {{ form.password() }}<br>
+        {{ form.submit() }}
+    </form>
+    <h1>Парсинг товаров</h1>
+    <form method="POST" action="/parse">
+        <input type="text" name="category" placeholder="Введите категорию" required>
+        <button type="submit">Парсить</button>
+    </form>
+</body>
+</html>
